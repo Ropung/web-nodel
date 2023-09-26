@@ -1,0 +1,25 @@
+syntax="proto3";
+
+option java_multiple_files = true;
+option java_package = "com.novel.grpc.member.lib";
+option java_outer_classname = "memberSaveProtobuf";
+
+service MemberSave {
+    rpc memberSave (MemberSaveRequest) returns (MemberSaveResponse);
+}
+
+message MemberSaveRequest {
+    string username = 1;
+    string password = 2;
+    string genderType = 3;
+    string name = 4;
+    string nickname = 5;
+}
+
+message MemberSaveResponse {
+    string id = 1;
+    string username = 2;
+    string genderType = 3;
+    string name = 4;
+    string nickname = 5;
+}
